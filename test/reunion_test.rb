@@ -16,7 +16,11 @@ class ReunionTest < Minitest::Test
   def test_it_has_readable_attributes
     assert_equal "1406 BE", @reunion.name
   end
-end 
+
+  def test_has_no_activites_by_default
+    assert_equal [], @reunion.activities
+  end
+end
 
 
 # ### Iteration 2: Activity Calculations and creating Reunions
@@ -33,15 +37,6 @@ end
 
 # Additionaly, use TDD to create a Reunion class that responds to the following interaction pattern:
 #
-# ```ruby
-# require './lib/reunion'
-# # => true
-#
-# reunion = Reunion.new("1406 BE")
-# # => #<Reunion:0x007fe4ca1defc8 ...>
-#
-# reunion.name
-# # => "1406 BE"
 #
 # reunion.activities
 # # => []
