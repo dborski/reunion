@@ -13,4 +13,14 @@ class Reunion
   def total_cost
     @activities.sum { |activity| activity.total_cost}
   end
+
+  def breakout
+    breakout = Hash.new(0)
+    @activities.each do |activity|
+      activity.owed.each do |name, owed|
+        breakout[name] += owed
+      end
+    end
+    breakout
+  end
 end
