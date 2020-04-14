@@ -11,4 +11,8 @@ class Activity
     @participants[name] = cost
     @total_cost += cost
   end
+
+  def split
+    @total_cost / @participants.length
+  end
 end
