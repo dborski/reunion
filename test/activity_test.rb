@@ -16,12 +16,10 @@ class ActivityTest < Minitest::Test
     assert_equal "Brunch", @activity.name
   end
 
-
-
+  def test_it_has_no_participants_by_default
+    assert_equal ({}), @activity.participants
+  end
 end
-
-
-
 
 
 
@@ -34,16 +32,7 @@ end
 # represents the name of someone who participated in the activity,
 # and the second argument represents how much they paid for the activity.
 #
-# ```ruby
-#require './lib/activity'
-# # => true
-#
-#activity = Activity.new("Brunch")
-# # => #<Activity:0x007fe4ca1df568 ...>
-#
-#activity.name
-# # => "Brunch"
-#
+
 #activity.participants
 # # => {}
 #
