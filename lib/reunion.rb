@@ -23,4 +23,11 @@ class Reunion
     end
     breakout
   end
+
+  def summary
+    summary = breakout.map do |name, owed|
+      "#{name}: #{owed}"
+    end
+    summary.join("\n")
+  end
 end
