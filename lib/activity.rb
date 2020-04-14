@@ -17,6 +17,6 @@ class Activity
   end
 
   def owed
-    @participants.transform_values { |participant| split - participant }
+    @participants.transform_values { |value| split - value }
   end
 end
