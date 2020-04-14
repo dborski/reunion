@@ -19,6 +19,13 @@ class ActivityTest < Minitest::Test
   def test_it_has_no_participants_by_default
     assert_equal ({}), @activity.participants
   end
+
+  def test_can_add_participants
+    @activity.add_participant("Maria", 20)
+
+    expected = {"Maria" => 20}
+    assert_equal expected, @activity.participants
+  end
 end
 
 
@@ -33,9 +40,6 @@ end
 # and the second argument represents how much they paid for the activity.
 #
 
-#activity.participants
-# # => {}
-#
 #activity.add_participant("Maria", 20)
 #
 #activity.participants
